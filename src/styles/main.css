@@ -80,7 +80,7 @@ button {
 
 /* Layout */
 
-.wrapper {
+.container {
   max-width: var(--screen-desktop);
   min-width: var(--screen-mobile);
   margin: 0 auto;
