@@ -26,39 +26,43 @@ button {
   color: inherit;
 }
 
+ul {
+  list-style: none
+}
+
 /* Heading text */
 
-.heading-1 {
+.h1-text {
   font-size: var(--font-size-heading-1);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-heading-1);
 }
 
-.heading-2 {
+.h2-text {
   font-size: var(--font-size-heading-2);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-heading-2);
 }
 
-.heading-3 {
+.h3-text {
   font-size: var(--font-size-heading-3);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-heading-3);
 }
 
-.accent {
+.accent-text {
   font-style: italic;
 }
 
 /* Body text */
 
-.medium {
+.medium-text {
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-body);
 }
 
-.caption {
+.caption-text {
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-caption);
@@ -66,13 +70,13 @@ button {
 
 /* Action text */
 
-.link-button {
+.link-btn-text {
   font-size: var(--font-size-action);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-action);
 }
 
-.burger-link {
+.burger-text {
   font-size: var(--font-size-burger);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-burger);
@@ -82,7 +86,7 @@ button {
 
 .container {
   max-width: var(--screen-desktop);
-  min-width: var(--screen-mobile);
+  /* min-width: var(--screen-mobile); */
   margin: 0 auto;
 }
 
