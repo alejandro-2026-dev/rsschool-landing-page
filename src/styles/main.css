@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  background-color: var(--bg-page);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+/* Heading text */
+
+.heading-1 {
+  font-size: var(--font-size-heading-1);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading-1);
+}
+
+.heading-2 {
+  font-size: var(--font-size-heading-2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading-2);
+}
+
+.heading-3 {
+  font-size: var(--font-size-heading-3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading-3);
+}
+
+.accent {
+  font-style: italic;
+}
+
+/* Body text */
+
+.medium {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
+
+.caption {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-caption);
+}
+
+/* Action text */
+
+.link-button {
+  font-size: var(--font-size-action);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-action);
+}
+
+.burger-link {
+  font-size: var(--font-size-burger);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-burger);
+}
+
+/* Layout */
+
+.wrapper {
+  max-width: var(--screen-desktop);
+  min-width: var(--screen-mobile);
+  margin: 0 auto;
+}
+
+/* Helpers */
+
+.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
