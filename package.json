@@ -21,5 +21,8 @@
     "globals": "^17.12.0",
     "prettier": "^3.9.6",
     "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "modern-normalize": "^3.0.1"
   }
 }
