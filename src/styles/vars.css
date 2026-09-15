@@ -1,0 +1,61 @@
+:root {
+  --font-family: "Inter", sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+
+  --font-size-heading-1: 72px;
+  --line-height-heading-1: 1.05;
+  --font-size-heading-2: 60px;
+  --line-height-heading-2: 1.25;
+  --font-size-heading-3: 24px;
+  --line-height-heading-3: 1.25;
+
+  --font-size-body: 16px;
+  --line-height-body: 1.5;
+  --font-size-caption: 10px;
+  --line-height-caption: 1.4;
+
+  --font-size-action: 16px;
+  --line-height-action: 1.5;
+  --font-size-burger: 32px;
+  --line-height-burger: 1.25;
+
+  --text-primary: #403f3d;
+  --text-inverse: #e1d4c9;
+  --text-accent: #b0907a;
+
+  --bg-page: #e1d4c9;
+  --bg-container: #665f55;
+  --bg-overlay: rgb(64 63 61 / 0.8);
+
+  --border-primary: #c1b6ad;
+  --border-inverse: #665f55;
+
+  --screen-desktop: 1440px;
+  --screen-tablet: 768px;
+  --screen-mobile: 380px;
+
+  --transition: 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --text-primary: #e1d4c9;
+  --text-inverse: #e1d4c9;
+  --text-accent: #b0907a;
+
+  --bg-page: #292826;
+  --bg-container: #403f3d;
+  --bg-overlay: rgb(41 40 38 / 0.8);
+
+  --border-primary: #665f55;
+  --border-inverse: #c1b6ad;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-heading-1: 42px;
+    --line-height-heading-1: 1.15;
+    --font-size-heading-2: 32px;
+  }
+}
