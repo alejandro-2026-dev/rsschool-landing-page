@@ -54,8 +54,13 @@
 
 @media (max-width: 768px) {
   :root {
+    --font-size-heading-2: 32px;
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
     --font-size-heading-1: 42px;
     --line-height-heading-1: 1.15;
-    --font-size-heading-2: 32px;
   }
 }
