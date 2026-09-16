@@ -52,12 +52,6 @@
   --border-inverse: #c1b6ad;
 }
 
-@media (max-width: 768px) {
-  :root {
-
-  }
-}
-
 @media (max-width: 380px) {
   :root {
     --font-size-heading-1: 42px;
