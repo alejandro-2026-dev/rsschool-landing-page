@@ -1,4 +1,112 @@
 <!-- favorite.html -->
 <section class="favorite" id="favorite">
-  <div class="container favorite__container">FAVORITE</div>
+  <div class="container favorite__container">
+    <h2 class="favorite__title h2-text">
+      Choose your
+      <span class="favorite__title-accent accent-text">favorite</span>
+      coffee
+    </h2>
+
+    <div class="slider">
+      <div class="slider__body">
+        <button
+          class="slider__button slider__button--prev button-icon-dark"
+          type="button"
+          aria-label="Previous slide"
+        >
+          <img
+            class="button-icon-dark__icon"
+            src="/svg/arrow-right.svg"
+            alt=""
+          />
+        </button>
+
+        <ul class="slider__row">
+          <li class="slider__slide">
+            <div class="slider__content">
+              <img
+                class="slider__image"
+                src="/images/coffee-slider-1.png"
+                alt="S'mores Frappuccino"
+              />
+              <div class="slider__description">
+                <h3 class="slider__name h3-text">S'mores Frappuccino</h3>
+                <p class="slider__text medium-text">
+                  This new drink takes an espresso and mixes it with brown sugar
+                  and cinnamon before being topped with oat milk.
+                </p>
+                <p class="slider__price h3-text">$5.50</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="slider__slide">
+            <div class="slider__content">
+              <img
+                class="slider__image"
+                src="/images/coffee-slider-2.png"
+                alt="Caramel Macchiato"
+              />
+              <div class="slider__description">
+                <h3 class="slider__name h3-text">Caramel Macchiato</h3>
+                <p class="slider__text medium-text">
+                  Fragrant and unique classic espresso with rich caramel-peanut
+                  syrup, with cream under whipped thick foam.
+                </p>
+                <p class="slider__price h3-text">$5.00</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="slider__slide">
+            <div class="slider__content">
+              <img
+                class="slider__image"
+                src="/images/coffee-slider-3.png"
+                alt="Ice coffee"
+              />
+              <div class="slider__description">
+                <h3 class="slider__name h3-text">Ice coffee</h3>
+                <p class="slider__text medium-text">
+                  A popular summer drink that tones and invigorates. Prepared
+                  from coffee, milk and ice.
+                </p>
+                <p class="slider__price h3-text">$4.50</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <button
+          class="slider__button slider__button--next button-icon-dark"
+          type="button"
+          aria-label="Next slide"
+        >
+          <img
+            class="button-icon-dark__icon"
+            src="/svg/arrow-right.svg"
+            alt=""
+          />
+        </button>
+      </div>
+
+      <div class="slider__controls">
+        <button
+          class="slider__control slider__control--active"
+          type="button"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          class="slider__control"
+          type="button"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          class="slider__control"
+          type="button"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+    </div>
+  </div>
 </section>
