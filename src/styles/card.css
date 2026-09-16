@@ -1,0 +1,44 @@
+.card {
+  width: 310px;
+  height: 506px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border-primary);
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.card__box {
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: transform var(--transition);
+}
+
+.card:hover .card__image {
+  transform: scale(1);
+}
+
+.card__description {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 16px;
+}
+
+.card__title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
