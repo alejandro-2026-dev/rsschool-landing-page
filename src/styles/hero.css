@@ -38,7 +38,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
   width: 200px;
   height: 64px;
   border-radius: 100px;
@@ -46,11 +45,16 @@
 }
 
 .button-primary__icon {
-  display: none;
+  width: 0;
+  opacity: 0;
+  transition: width var(--transition), opacity var(--transition),
+    margin-left var(--transition);
 }
 
 .button-primary:hover .button-primary__icon {
-  display: block;
+  width: 20px;
+  margin-left: 8px;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
