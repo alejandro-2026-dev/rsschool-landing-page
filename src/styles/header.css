@@ -5,21 +5,14 @@
 .header__container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   padding-left: 40px;
   padding-right: 40px;
   gap: 20px;
 }
 
-.header__logo {
-  display: block;
-  flex-shrink: 0;
-}
-
 .header__logo-img {
   display: block;
   width: 100px;
-  height: auto;
 }
 
 .header__nav {
@@ -34,13 +27,13 @@
   gap: 40px;
 }
 
-.header__link {
+.header__link,
+.header__menu-link {
   position: relative;
-  color: var(--text-primary);
-  text-decoration: none;
 }
 
-.header__link::after {
+.header__link::after,
+.header__menu-link::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -52,7 +45,8 @@
   transition: width var(--transition);
 }
 
-.header__link:hover::after {
+.header__link:hover::after,
+.header__menu-link:hover::after {
   width: 100%;
 }
 
@@ -67,8 +61,8 @@
   display: flex;
   align-items: center;
   width: 88px;
-  gap: 16px;
-  padding: 4px;
+  gap: 8px;
+  padding: 3px;
   border: 1px solid var(--border-primary);
   border-radius: 100px;
 }
@@ -76,17 +70,18 @@
 .header__theme-icon {
   width: 36px;
   height: 36px;
-  padding: 6px;
   border-radius: 50%;
   transition: background-color var(--transition);
 }
 
 .header__theme-icon--sun {
   background-color: var(--text-accent);
+  padding: 7px;
 }
 
 .header__theme-icon--moon {
   background-color: transparent;
+  padding: 9px;
 }
 
 [data-theme="dark"] .header__theme-icon--sun {
@@ -101,14 +96,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--text-primary);
-  text-decoration: none;
-  border-bottom: 1px solid var(--text-primary);
-  transition: color var(--transition);
-}
-
-.header__menu-link:hover {
-  color: var(--text-accent);
 }
 
 .header__coffee-cup {
@@ -129,7 +116,6 @@
 }
 
 .header__burger-bar {
-  display: block;
   width: 16px;
   height: 2px;
   background-color: var(--text-primary);
@@ -151,26 +137,28 @@
     height: 52px;
   }
 
-  .header__actions {
-    width: 172px;
-    justify-content: space-between;
+  .header__theme-icon {
+    width: 44px;
+    height: 40px;
+    border-radius: 100px;
   }
 
+  .header__theme-icon--sun {
+    padding: 9px 11px;
+  }
+
+  .header__theme-icon--moon {
+    padding: 11px 13px;
+  }
 }
 
 @media (max-width: 600px) {
   .header__container {
     padding-left: 16px;
     padding-right: 16px;
-    gap: 0px;
   }
 
   .header__actions {
-    width: 160px;
     gap: 12px;
-  }
-
-  .header__theme-switch {
-    width: 104px;
   }
 }
