@@ -35,10 +35,7 @@
 }
 
 .download__image {
-  display: block;
   width: 630px;
-  max-width: 100%;
-  height: auto;
 }
 
 .button-store {
@@ -58,7 +55,6 @@
 }
 
 .button-store__icon {
-  display: block;
   width: 36px;
   height: 36px;
   transition: filter var(--transition);

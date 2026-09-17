@@ -62,7 +62,6 @@
 }
 
 .button-icon-light__icon {
-  display: block;
   width: 24px;
   height: 24px;
   transition: filter var(--transition);
@@ -97,7 +96,6 @@ a.link-contact:hover::after {
 }
 
 .link-contact__icon {
-  display: block;
   width: 20px;
   height: 20px;
 }
