@@ -1,13 +1,14 @@
 .header {
   padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .header__container {
   display: flex;
   align-items: center;
-  padding-left: 40px;
-  padding-right: 40px;
   gap: 20px;
+  max-width: 1360px;
 }
 
 .header__logo-img {
@@ -153,7 +154,7 @@
 }
 
 @media (max-width: 600px) {
-  .header__container {
+  .header {
     padding-left: 16px;
     padding-right: 16px;
   }
