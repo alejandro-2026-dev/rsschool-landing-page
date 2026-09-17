@@ -34,7 +34,7 @@
 
   --screen-desktop: 1440px;
   --screen-tablet: 768px;
-  --screen-mobile: 380px;
+  --screen-mobile: 600px;
 
   --transition: 0.3s ease;
 }
@@ -52,7 +52,7 @@
   --border-inverse: #c1b6ad;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 600px) {
   :root {
     --font-size-heading-1: 42px;
     --line-height-heading-1: 1.15;

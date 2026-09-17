@@ -124,7 +124,7 @@
   transform: scaleX(-1);
 }
 
-@media (max-width: 380px) {
+@media (max-width: 600px) {
   .favorite {
     padding-left: 16px;
     padding-right: 16px;

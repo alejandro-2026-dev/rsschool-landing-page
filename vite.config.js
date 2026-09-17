@@ -11,8 +11,11 @@ export default defineConfig({
   root: SRC,
   publicDir: resolve(__dirname, "public"),
   server: { port: 4000, open: true },
+  base: "./",
   build: {
     sourcemap: true,
+    minify: false,
+    cssMinify: false,
     outDir: resolve(__dirname, "dist"),
     emptyOutDir: true,
     rollupOptions: {

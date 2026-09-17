@@ -13,7 +13,7 @@ export function fillGrid() {
     const card = template.content.cloneNode(true);
 
     const image = card.querySelector(".card__image");
-    image.src = `/images/coffee-${product.id}.jpg`;
+    image.src = `images/coffee-${product.id}.jpg`;
     image.alt = product.name;
 
     card.querySelector(".card__name").textContent = product.name;

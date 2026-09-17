@@ -111,7 +111,7 @@ a.link-contact:hover::after {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 600px) {
   .footer {
     padding-left: 16px;
     padding-right: 16px;

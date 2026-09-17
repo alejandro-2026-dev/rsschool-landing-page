@@ -84,7 +84,7 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 600px) {
   .download {
     padding-left: 16px;
     padding-right: 16px;

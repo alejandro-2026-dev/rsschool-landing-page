@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("mode") ?? "light";
+    </script>
     <title>Menu</title>
   </head>
   <body>
@@ -11,9 +16,9 @@
       <!-- @include offer -->
       <!-- @include grid -->
     </main>
-      <!-- @include footer -->
-      <!-- @include card -->
-      <!-- @include modal -->
+    <!-- @include footer -->
+    <!-- @include card -->
+    <!-- @include modal -->
     <script type="module" src="/js/index.js"></script>
   </body>
 </html>

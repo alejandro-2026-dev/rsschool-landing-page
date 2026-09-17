@@ -1,7 +1,7 @@
 export function setSwitchDarkMode() {
   const htmlElement = document.querySelector("html");
   const switchElement = document.querySelector(".header__theme-switch");
-  htmlElement.dataset.theme = localStorage.getItem("mode") ?? "light";
+  // htmlElement.dataset.theme = localStorage.getItem("mode") ?? "light";
 
   switchElement.addEventListener("click", () => {
     const mode = localStorage.getItem("mode");
