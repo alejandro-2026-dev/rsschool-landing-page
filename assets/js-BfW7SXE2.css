@@ -1037,7 +1037,9 @@ a.link-contact:hover::after {
 }
 
 .download__image {
-  width: 630px;
+  width: 100%;
+  max-width: 630px;
+  min-width: 0;
 }
 
 .button-store {
