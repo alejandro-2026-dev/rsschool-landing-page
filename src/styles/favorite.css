@@ -1,0 +1,143 @@
+.favorite {
+  padding-top: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.favorite__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 1360px;
+}
+
+.favorite__title {
+  text-align: center;
+}
+
+.favorite__title-accent {
+  color: var(--text-accent);
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.slider__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+.slider__row {
+  display: flex;
+  max-width: 1150px;
+  overflow: hidden;
+}
+
+.slider__slide {
+  flex: 0 0 100%;
+}
+
+.slider__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.slider__image {
+  width: 480px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.slider__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  max-width: 480px;
+}
+
+.slider__controls {
+  display: flex;
+  gap: 12px;
+}
+
+.slider__control {
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: var(--border-primary);
+  transition: background-color var(--transition);
+}
+
+.slider__control:hover {
+  background-color: var(--bg-container);
+}
+
+.slider__control--active {
+  background-color: var(--bg-container);
+}
+
+.button-icon-dark {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--border-inverse);
+  border-radius: 50%;
+  transition: background-color var(--transition);
+}
+
+.button-icon-dark:hover {
+  background-color: var(--bg-container);
+}
+
+.button-icon-dark__icon {
+  width: 24px;
+  height: 24px;
+  transition: filter var(--transition);
+}
+
+.button-icon-dark:hover .button-icon-dark__icon {
+  filter: brightness(0) invert(1);
+}
+
+.slider__button--prev .button-icon-dark__icon {
+  transform: scaleX(-1);
+}
+
+@media (max-width: 600px) {
+  .favorite {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .slider__image {
+    width: 348px;
+  }
+
+  .slider__button {
+    display: none;
+  }
+
+  .slider__row {
+    width: 100%;
+  }
+
+  .slider__description {
+    max-width: 100%;
+  }
+}
