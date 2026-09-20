@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("mode") ?? "light";
+    </script>
+    <title>Menu</title>
+    <script type="module" crossorigin src="./assets/js-8Xwv2Lru.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/js-BzqHW4N5.css">
+  </head>
+  <body class="page-catalog">
+<!-- header.html -->
+<header class="header">
+  <div class="container header__container">
+    <a class="header__logo" href="./">
+      <img
+        class="header__logo-img"
+        src="svg/logo.svg"
+        alt="Resource Coffee House"
+      />
+    </a>
+
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li class="header__menu-item">
+          <a class="header__link link-btn-text" href="./#favorite"
+            >Favorite coffee</a
+          >
+        </li>
+        <li class="header__menu-item">
+          <a class="header__link link-btn-text" href="./#about">About</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__link link-btn-text" href="./#download"
+            >Mobile app</a
+          >
+        </li>
+        <li class="header__menu-item">
+          <a class="header__link link-btn-text" href="./#contacts"
+            >Contact us</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button
+        class="header__theme-switch"
+        type="button"
+        aria-label="Switch theme"
+      >
+        <img
+          class="header__theme-icon header__theme-icon--sun"
+          src="svg/sun.svg"
+          alt=""
+        />
+        <img
+          class="header__theme-icon header__theme-icon--moon"
+          src="svg/moon.svg"
+          alt=""
+        />
+      </button>
+
+      <a class="header__menu-link link-btn-text" href="catalog.html">
+        Menu
+        <img class="header__coffee-cup" src="svg/coffee-cup.svg" alt="" />
+      </a>
+
+      <button class="header__burger" type="button" aria-label="Open menu">
+        <span class="header__burger-bar"></span>
+        <span class="header__burger-bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <main>
+<!-- offer.html -->
+<section class="offer" id="offer">
+  <div class="container offer__container">
+    <h1 class="offer__title h2-text">
+      Behind each of our cups hides an
+      <span class="offer__title-accent accent-text">amazing surprise</span>
+    </h1>
+
+    <div class="offer__tabs">
+      <button class="tab-item tab-item--active" type="button">
+        <span class="tab-item__icon" aria-hidden="true">☕</span>
+        <span class="tab-item__text link-btn-text">Coffee</span>
+      </button>
+
+      <button class="tab-item" type="button">
+        <span class="tab-item__icon" aria-hidden="true">🫖</span>
+        <span class="tab-item__text link-btn-text">Tea</span>
+      </button>
+
+      <button class="tab-item" type="button">
+        <span class="tab-item__icon" aria-hidden="true">🍰</span>
+        <span class="tab-item__text link-btn-text">Dessert</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- grid.html -->
+<section class="grid" id="grid">
+  <div class="container grid__container"></div>
+  <div class="grid__more">
+    <button class="button-icon-dark" type="button" aria-label="Show more cards">
+      <img
+        class="button-icon-dark__icon"
+        src="svg/refresh.svg"
+        alt=""
+      />
+    </button>
+  </div>
+</section>
+
+    </main>
+<!-- footer.html -->
+<footer class="footer" id="contacts">
+  <div class="container footer__container">
+    <div class="footer__offer">
+      <h2 class="footer__title h2-text">
+        Sip, Savor, Smile.
+        <span class="footer__title-accent accent-text">It's coffee time!</span>
+      </h2>
+
+      <ul class="footer__socials">
+        <li>
+          <a
+            class="button-icon-light"
+            href="https://twitter.com"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <img
+              class="button-icon-light__icon"
+              src="svg/twitter.svg"
+              alt=""
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="button-icon-light"
+            href="https://instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img
+              class="button-icon-light__icon"
+              src="svg/instagram.svg"
+              alt=""
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="button-icon-light"
+            href="https://facebook.com"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <img
+              class="button-icon-light__icon"
+              src="svg/facebook.svg"
+              alt=""
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__contacts-info">
+      <h3 class="footer__contacts-title h3-text">Contact us</h3>
+
+      <ul class="footer__contacts">
+        <li>
+          <a
+            class="link-contact link-btn-text"
+            href="https://maps.google.com/?q=8558+Green+Rd.,+LA"
+            target="_blank"
+          >
+            <img class="link-contact__icon" src="svg/location.svg" alt="" />
+            8558 Green Rd., LA
+          </a>
+        </li>
+        <li>
+          <a class="link-contact link-btn-text" href="tel:+16035550123">
+            <img class="link-contact__icon" src="svg/phone.svg" alt="" />
+            +1 (603) 555-0123
+          </a>
+        </li>
+        <li>
+          <p class="link-contact link-btn-text">
+            <img class="link-contact__icon" src="svg/clock.svg" alt="" />
+            Mon-Sat: 9:00-23:00
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- card.html -->
+<template id="card-template">
+  <article class="card">
+    <div class="card__box">
+      <img class="card__image" src="images/coffee-1.jpg" alt="" />
+    </div>
+
+    <div class="card__description">
+      <div class="card__title">
+        <h2 class="card__name h3-text"></h2>
+        <p class="card__text medium-text"></p>
+      </div>
+
+      <p class="card__price h3-text"></p>
+    </div>
+  </article>
+</template>
+
+<!-- modal.html -->
+<div class="modal hidden">
+  <div class="modal__content"></div>
+</div>
+
+  </body>
+</html>
