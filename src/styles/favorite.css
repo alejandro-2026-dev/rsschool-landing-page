@@ -36,10 +36,15 @@
   width: 100%;
 }
 
+.slider__viewport {
+  overflow: hidden;
+  max-width: 1150px;
+  flex: 1;
+}
+
 .slider__row {
   display: flex;
-  max-width: 1150px;
-  overflow: hidden;
+  transition: transform var(--transition);
 }
 
 .slider__slide {
@@ -125,16 +130,16 @@
     padding-right: 16px;
   }
 
+  .slider__viewport {
+    width: 100%
+  }
+
   .slider__image {
     width: 348px;
   }
 
   .slider__button {
     display: none;
-  }
-
-  .slider__row {
-    width: 100%;
   }
 
   .slider__description {

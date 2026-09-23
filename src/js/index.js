@@ -23,7 +23,9 @@ import "../styles/modal.css";
 import { fillGrid } from "./fill-grid";
 import { setSwitchDarkMode } from "./switch";
 import { burger } from "./burger";
+import { slider } from "./slider";
 
 setSwitchDarkMode();
 fillGrid();
 burger();
+slider();
