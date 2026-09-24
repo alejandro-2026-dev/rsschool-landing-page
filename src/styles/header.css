@@ -205,7 +205,6 @@
 
   .header__panel .header__menu-link {
     display: flex;
-    display: flex;
     font-size: var(--font-size-burger);
     line-height: var(--line-height-burger);
   }
