@@ -20,12 +20,12 @@ import "../styles/card.css";
 import "../styles/modal.css";
 
 // functions
-import { fillGrid } from "./fill-grid";
+import { initGrid } from "./fill-grid";
 import { setSwitchDarkMode } from "./switch";
 import { burger } from "./burger";
 import { slider } from "./slider";
 
 setSwitchDarkMode();
-fillGrid();
+initGrid();
 burger();
 slider();

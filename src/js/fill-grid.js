@@ -2,28 +2,43 @@
 import products from "./products.json";
 import { openModal } from "./modal";
 
-export function fillGrid() {
+export function initGrid() {
   const grid = document.querySelector(".grid__container");
   const template = document.getElementById("card-template");
+  const offer = document.querySelector(".offer__tabs");
+  const tabItems = document.querySelectorAll('.tab-item');
 
-  if (!grid || !template) return;
-
-  grid.textContent = "";
+  if (!grid || !template || !offer) return;
 
   let choice = "coffee";
+  fillGrid(grid, template, choice);
 
+  offer.addEventListener("click", (e) => {
+    const currentBtn = e.target.closest(".tab-item");
+    if (!currentBtn) return;
+    const btnCategory = currentBtn.dataset.category;
+    if (["coffee", "tea", "dessert"].includes(btnCategory)) {
+      fillGrid(grid, template, btnCategory);
+      tabItems.forEach((btn) => btn.classList.remove('tab-item--active'));
+      currentBtn.classList.add('tab-item--active');
+    }
+  });
+}
+
+function fillGrid(grid, template, choice) {
+  grid.textContent = "";
   const filtered = products.filter((product) => product.category === choice);
-
   filtered.forEach((product, index) => {
     const card = template.content.cloneNode(true);
 
     const image = card.querySelector(".card__image");
-    image.src = `images/coffee-${index + 1}.jpg`;
+    image.src = `images/${choice}-${index + 1}.jpg`;
     image.alt = product.name;
 
     card.querySelector(".card__name").textContent = product.name;
     card.querySelector(".card__text").textContent = product.description;
-    card.querySelector(".card__price").textContent = `$${Number(product.price).toFixed(2)}`;
+    card.querySelector(".card__price").textContent =
+      `$${Number(product.price).toFixed(2)}`;
 
     const cardEl = card.firstElementChild;
     cardEl.addEventListener("click", () => openModal(product));
