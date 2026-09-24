@@ -1,0 +1,152 @@
+/* overlay */
+.modal {
+  position: fixed;
+  z-index: 200;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--bg-overlay);
+}
+
+/* modal.css loads after main.css, so without this rule .modal's display: flex beats .hidden */
+.modal.hidden {
+  display: none;
+}
+
+/* white box */
+.modal__content {
+  max-width: 800px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 40px;
+  background-color: var(--bg-page);
+}
+
+/* image + right column */
+.modal__container {
+  display: flex;
+  gap: 0px;
+}
+
+.modal__image {
+  flex-shrink: 0;
+  width: 310px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 40px;
+  align-self: flex-start;
+}
+
+/* right column */
+.modal__inner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.modal__title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Size / Additives */
+.modal__size,
+.modal__adds {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* .tab-item, .tab-item--active, .tab-item__icon styles come from offer.css */
+.modal__size--tabs,
+.modal__adds--tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Total */
+.modal__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* alert */
+.modal__alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 0px;
+  border-top: 1px solid var(--border-primary);
+}
+
+.modal__alert-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+/* Close */
+.modal__button {
+  width: 100%;
+  padding: 10px 78px;
+  border: 1px solid var(--border-inverse);
+  border-radius: 100px;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.modal__button:hover {
+  background-color: var(--bg-container);
+  color: var(--text-inverse);
+}
+
+.modal .tab-item:hover .tab-item__icon,
+.modal .tab-item--active .tab-item__icon {
+  color: var(--bg-container);
+}
+
+[data-theme="dark"] .modal__alert-icon {
+  filter: brightness(0) invert(1);
+}
+
+[data-theme="dark"] .modal__content {
+  background-color: var(--bg-container);
+}
+
+[data-theme="dark"] .modal .tab-item:hover,
+[data-theme="dark"] .modal .tab-item--active {
+  background-color: var(--bg-page);
+  border-color: transparent;
+}
+
+[data-theme="dark"] .modal__button {
+  border-color: var(--border-primary);
+}
+
+@media (max-width: 768px) {
+  .modal__content {
+    max-width: 688px;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal__image {
+    display: none;
+  }
+
+  .modal__inner {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .modal__content {
+    max-width: 342px;
+  }
+}

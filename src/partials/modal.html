@@ -1,4 +1,51 @@
 <!-- modal.html -->
 <div class="modal hidden">
-  <div class="modal__content"></div>
+  <div class="modal__content">
+    <div class="modal__container">
+      <img class="modal__image" src="" alt="" />
+      <div class="modal__inner">
+        
+        <div class="modal__title">
+          <h2 class="modal__name h3-text"></h2>
+          <p class="modal__description medium-text"></p>
+        </div>
+
+        <div class="modal__size">
+          <h3 class="modal__label medium-text">Size</h3>
+          <div class="modal__size--tabs"></div>
+        </div>
+
+        <div class="modal__adds">
+          <h3 class="modal__label medium-text">Additives</h3>
+          <div class="modal__adds--tabs"></div>
+        </div>
+
+        <div class="modal__total">
+          <p class="h3-text">Total:</p>
+          <p class="modal__price h3-text"></p>
+        </div>
+
+        <div class="modal__alert">
+          <img class="modal__alert-icon" src="svg/info-empty.svg" alt="" />
+          <p class="caption-text">
+            The cost is not final. Download our mobile app to see the final
+            price and place your order. Earn loyalty points and enjoy your
+            favorite coffee with up to 20% discount.
+          </p>
+        </div>
+
+        <button class="modal__button" type="button">
+          <span class="link-btn-text">Close</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
 </div>
+
+<template id="tab-template">
+  <button class="tab-item" type="button">
+    <span class="tab-item__icon link-btn-text"></span>
+    <span class="tab-item__text link-btn-text"></span>
+  </button>
+</template>

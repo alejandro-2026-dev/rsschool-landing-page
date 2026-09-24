@@ -24,8 +24,11 @@ import { initGrid } from "./fill-grid";
 import { setSwitchDarkMode } from "./switch";
 import { burger } from "./burger";
 import { slider } from "./slider";
+import { Modal } from "./modal";
 
 setSwitchDarkMode();
-initGrid();
+const modal = new Modal();
+initGrid(modal);
 burger();
 slider();
+
