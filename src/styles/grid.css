@@ -36,12 +36,16 @@
     display: none;
   }
 
-  .grid__container--expanded .card:nth-child(n + 5) {
+  .grid__more {
     display: flex;
   }
 
-  .grid__more {
+  .grid--expanded .card:nth-child(n + 5) {
     display: flex;
+  }
+
+  .grid--expanded .grid__more {
+    display: none;
   }
 }
 

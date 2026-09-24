@@ -3,31 +3,38 @@ import products from "./products.json";
 import { openModal } from "./modal";
 
 export function initGrid() {
+  const root = document.querySelector(".grid");
   const grid = document.querySelector(".grid__container");
   const template = document.getElementById("card-template");
   const offer = document.querySelector(".offer__tabs");
   const tabItems = document.querySelectorAll('.tab-item');
+  const btnShowMore = document.getElementById('show-more');
 
   if (!grid || !template || !offer) return;
 
   let choice = "coffee";
-  fillGrid(grid, template, choice);
+  fillGrid(root, grid, template, choice);
 
   offer.addEventListener("click", (e) => {
     const currentBtn = e.target.closest(".tab-item");
     if (!currentBtn) return;
     const btnCategory = currentBtn.dataset.category;
     if (["coffee", "tea", "dessert"].includes(btnCategory)) {
-      fillGrid(grid, template, btnCategory);
+      fillGrid(root, grid, template, btnCategory);
       tabItems.forEach((btn) => btn.classList.remove('tab-item--active'));
       currentBtn.classList.add('tab-item--active');
     }
   });
+
+  btnShowMore.addEventListener('click', () => {
+    root.classList.add('grid--expanded');
+  })
 }
 
-function fillGrid(grid, template, choice) {
+function fillGrid(root, grid, template, choice) {
   grid.textContent = "";
   const filtered = products.filter((product) => product.category === choice);
+  filtered.length > 4 ? root.classList.remove('grid--expanded') : root.classList.add('grid--expanded');
   filtered.forEach((product, index) => {
     const card = template.content.cloneNode(true);
 
