@@ -42,6 +42,7 @@
 .tab-item--active {
   background-color: var(--bg-container);
   color: var(--text-inverse);
+  border-color: transparent;
 }
 
 .tab-item__icon {
@@ -58,6 +59,16 @@
 .tab-item:hover .tab-item__icon,
 .tab-item--active .tab-item__icon {
   background-color: var(--text-inverse);
+}
+
+[data-theme="dark"] .offer .tab-item:hover .tab-item__icon,
+[data-theme="dark"] .offer .tab-item--active .tab-item__icon {
+  background-color: var(--bg-page);
+}
+
+.tab-item__img {
+  width: 16px;
+  height: 16px;
 }
 
 @media (max-width: 600px) {
