@@ -71,6 +71,14 @@
   filter: brightness(0);
 }
 
+[data-theme="dark"] .button-icon-light:hover {
+  background-color: var(--bg-page);
+  border-color: transparent;
+}
+
+[data-theme="dark"] .button-icon-light:hover .button-icon-light__icon {
+  filter: none;
+}
 
 .link-contact {
   position: relative;
