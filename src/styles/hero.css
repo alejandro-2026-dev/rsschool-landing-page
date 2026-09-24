@@ -51,6 +51,10 @@
     margin-left var(--transition);
 }
 
+[data-theme="dark"] .button-primary__icon {
+  content: url("../../public/svg/coffee-cup-dark.svg");
+}
+
 .button-primary:hover .button-primary__icon {
   width: 20px;
   margin-left: 8px;

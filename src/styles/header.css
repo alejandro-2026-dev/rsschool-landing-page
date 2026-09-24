@@ -29,8 +29,8 @@
   width: 100px;
 }
 
-[data-theme="dark"] .header__logo-img {
-  content: url("../../public/svg/logo-for-dark.svg");
+[data-theme="dark"] .header__coffee-cup {
+  content: url("../../public/svg/coffee-cup-dark.svg");
 }
 
 .header__panel {
@@ -142,17 +142,9 @@
   transition: none;
 }
 
-.page-catalog .header__panel .header__menu-link::after {
-  width: 0;
-}
-
 .header__coffee-cup {
   width: 20px;
   height: 20px;
-}
-
-[data-theme="dark"] .header__coffee-cup {
-  filter: brightness(0) invert(1);
 }
 
 .header__burger {
