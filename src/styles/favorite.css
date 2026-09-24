@@ -119,6 +119,10 @@
   background-color: var(--bg-container);
 }
 
+[data-theme="dark"] .button-icon-dark:hover {
+  border-color: transparent;
+}
+
 .button-icon-dark__icon {
   width: 24px;
   height: 24px;
