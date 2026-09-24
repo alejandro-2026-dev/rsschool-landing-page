@@ -40,6 +40,10 @@
   min-width: 0;
 }
 
+[data-theme="dark"] .download__image {
+  content: url("../../public/images/mobile-for-dark.png");
+}
+
 .button-store {
   display: flex;
   align-items: center;
