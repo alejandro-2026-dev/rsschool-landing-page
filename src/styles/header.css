@@ -29,6 +29,10 @@
   width: 100px;
 }
 
+[data-theme="dark"] .header__logo-img {
+  content: url("../../public/svg/logo-for-dark.svg");
+}
+
 [data-theme="dark"] .header__coffee-cup {
   content: url("../../public/svg/coffee-cup-dark.svg");
 }
