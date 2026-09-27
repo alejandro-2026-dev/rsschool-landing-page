@@ -1,6 +1,6 @@
 export class Modal {
   constructor() {
-    this.module = null;
+    this.modal = null;
     this.product = null;
     this.imageSrc = null;
     this.size = 0;
@@ -21,14 +21,14 @@ export class Modal {
       if (e.key === "Escape") this.closeModal();
     });
 
-    const size_container = this.modal.querySelector(".modal__size--tabs");
-    size_container.addEventListener("click", (e) => {
+    const sizeContainer = this.modal.querySelector(".modal__size--tabs");
+    sizeContainer.addEventListener("click", (e) => {
       const targetTab = e.target.closest(".tab-item");
       if (targetTab) {
         this.size = Number(targetTab.dataset.index);
         this.renderPrice();
         targetTab.classList.add("tab-item--active");
-        const tabs = size_container.querySelectorAll(".tab-item");
+        const tabs = sizeContainer.querySelectorAll(".tab-item");
         tabs.forEach((item) => {
           if (item !== targetTab) item.classList.remove("tab-item--active");
         });
