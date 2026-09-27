@@ -9,8 +9,8 @@
         localStorage.getItem("mode") ?? "light";
     </script>
     <title>Menu</title>
-    <script type="module" crossorigin src="./assets/js-BexpPjzY.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/js-BfW7SXE2.css">
+    <script type="module" crossorigin src="./assets/js-6eTJMoaI.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/js-D0olX6z3.css">
   </head>
   <body class="page-catalog">
 <!-- header.html -->
@@ -24,28 +24,34 @@
       />
     </a>
 
-    <nav class="header__nav">
-      <ul class="header__menu">
-        <li class="header__menu-item">
-          <a class="header__link link-btn-text" href="./#favorite"
-            >Favorite coffee</a
-          >
-        </li>
-        <li class="header__menu-item">
-          <a class="header__link link-btn-text" href="./#about">About</a>
-        </li>
-        <li class="header__menu-item">
-          <a class="header__link link-btn-text" href="./#download"
-            >Mobile app</a
-          >
-        </li>
-        <li class="header__menu-item">
-          <a class="header__link link-btn-text" href="./#contacts"
-            >Contact us</a
-          >
-        </li>
-      </ul>
-    </nav>
+    <div class="header__panel">
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a class="header__link link-btn-text" href="./#favorite"
+              >Favorite coffee</a
+            >
+          </li>
+          <li class="header__menu-item">
+            <a class="header__link link-btn-text" href="./#about">About</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__link link-btn-text" href="./#download"
+              >Mobile app</a
+            >
+          </li>
+          <li class="header__menu-item">
+            <a class="header__link link-btn-text" href="./#contacts"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <a class="header__menu-link link-btn-text" href="catalog.html">
+        Menu
+        <img class="header__coffee-cup" src="svg/coffee-cup.svg" alt="" />
+      </a>
+    </div>
 
     <div class="header__actions">
       <button
@@ -88,18 +94,28 @@
     </h1>
 
     <div class="offer__tabs">
-      <button class="tab-item tab-item--active" type="button">
-        <span class="tab-item__icon" aria-hidden="true">☕</span>
+      <button
+        class="tab-item tab-item--active"
+        type="button"
+        data-category="coffee"
+      >
+        <span class="tab-item__icon" aria-hidden="true"
+          ><img class="tab-item__img" src="images/coffee-icon.png" alt=""
+        /></span>
         <span class="tab-item__text link-btn-text">Coffee</span>
       </button>
 
-      <button class="tab-item" type="button">
-        <span class="tab-item__icon" aria-hidden="true">🫖</span>
+      <button class="tab-item" type="button" data-category="tea">
+        <span class="tab-item__icon" aria-hidden="true"
+          ><img class="tab-item__img" src="images/tea-icon.png" alt=""
+        /></span>
         <span class="tab-item__text link-btn-text">Tea</span>
       </button>
 
-      <button class="tab-item" type="button">
-        <span class="tab-item__icon" aria-hidden="true">🍰</span>
+      <button class="tab-item" type="button" data-category="dessert">
+        <span class="tab-item__icon" aria-hidden="true"
+          ><img class="tab-item__img" src="images/dessert-icon.png" alt=""
+        /></span>
         <span class="tab-item__text link-btn-text">Dessert</span>
       </button>
     </div>
@@ -110,7 +126,7 @@
 <div class="grid" id="grid">
   <div class="container grid__container"></div>
   <div class="grid__more">
-    <button class="button-icon-dark" type="button" aria-label="Show more cards">
+    <button class="button-icon-dark" id="show-more" type="button" aria-label="Show more cards">
       <img class="button-icon-dark__icon" src="svg/refresh.svg" alt="" />
     </button>
   </div>
@@ -207,7 +223,7 @@
 <template id="card-template">
   <article class="card">
     <div class="card__box">
-      <img class="card__image" src="images/coffee-1.jpg" alt="" />
+      <img class="card__image" src="images/coffee-1.jpg" alt="Irish coffee" />
     </div>
 
     <div class="card__description">
@@ -223,8 +239,55 @@
 
 <!-- modal.html -->
 <div class="modal hidden">
-  <div class="modal__content"></div>
+  <div class="modal__content">
+    <div class="modal__container">
+      <img class="modal__image" src="images/coffee-1.jpg" alt="Irish coffee" />
+      <div class="modal__inner">
+
+        <div class="modal__title">
+          <h2 class="modal__name h3-text"></h2>
+          <p class="modal__description medium-text"></p>
+        </div>
+
+        <div class="modal__size">
+          <h3 class="modal__label medium-text">Size</h3>
+          <div class="modal__size--tabs"></div>
+        </div>
+
+        <div class="modal__adds">
+          <h3 class="modal__label medium-text">Additives</h3>
+          <div class="modal__adds--tabs"></div>
+        </div>
+
+        <div class="modal__total">
+          <p class="h3-text">Total:</p>
+          <p class="modal__price h3-text"></p>
+        </div>
+
+        <div class="modal__alert">
+          <img class="modal__alert-icon" src="svg/info-empty.svg" alt="" />
+          <p class="caption-text">
+            The cost is not final. Download our mobile app to see the final
+            price and place your order. Earn loyalty points and enjoy your
+            favorite coffee with up to 20% discount.
+          </p>
+        </div>
+
+        <button class="modal__button" type="button">
+          <span class="link-btn-text">Close</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
 </div>
+
+<template id="tab-template">
+  <button class="tab-item" type="button">
+    <span class="tab-item__icon link-btn-text"></span>
+    <span class="tab-item__text link-btn-text"></span>
+  </button>
+</template>
 
   </body>
 </html>

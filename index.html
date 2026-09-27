@@ -9,8 +9,8 @@
         localStorage.getItem("mode") ?? "light";
     </script>
     <title>Home</title>
-    <script type="module" crossorigin src="./assets/js-BexpPjzY.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/js-BfW7SXE2.css">
+    <script type="module" crossorigin src="./assets/js-6eTJMoaI.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/js-D0olX6z3.css">
   </head>
   <body class="page-index">
 <!-- header.html -->
@@ -24,28 +24,34 @@
       />
     </a>
 
-    <nav class="header__nav">
-      <ul class="header__menu">
-        <li class="header__menu-item">
-          <a class="header__link link-btn-text" href="./#favorite"
-            >Favorite coffee</a
-          >
-        </li>
-        <li class="header__menu-item">
-          <a class="header__link link-btn-text" href="./#about">About</a>
-        </li>
-        <li class="header__menu-item">
-          <a class="header__link link-btn-text" href="./#download"
-            >Mobile app</a
-          >
-        </li>
-        <li class="header__menu-item">
-          <a class="header__link link-btn-text" href="./#contacts"
-            >Contact us</a
-          >
-        </li>
-      </ul>
-    </nav>
+    <div class="header__panel">
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a class="header__link link-btn-text" href="./#favorite"
+              >Favorite coffee</a
+            >
+          </li>
+          <li class="header__menu-item">
+            <a class="header__link link-btn-text" href="./#about">About</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__link link-btn-text" href="./#download"
+              >Mobile app</a
+            >
+          </li>
+          <li class="header__menu-item">
+            <a class="header__link link-btn-text" href="./#contacts"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <a class="header__menu-link link-btn-text" href="catalog.html">
+        Menu
+        <img class="header__coffee-cup" src="svg/coffee-cup.svg" alt="" />
+      </a>
+    </div>
 
     <div class="header__actions">
       <button
@@ -82,10 +88,26 @@
 <!-- hero.html -->
 <section class="hero" id="hero">
   <div class="container hero__container">
+    <video
+      class="hero__video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="images/img-hero.jpg"
+      aria-hidden="true"
+    >
+      <source
+        src="video/tablet.mp4"
+        type="video/mp4"
+        media="(max-width: 768px)"
+      />
+      <source src="video/desktop.mp4" type="video/mp4" />
+    </video>
     <div class="hero__offer">
       <h1 class="hero__title h1-text">
-        <span class="hero__title-accent accent-text">Enjoy</span> premium
-        coffee at our charming cafe
+        <span class="hero__title-accent accent-text">Enjoy</span> premium coffee
+        at our charming cafe
       </h1>
 
       <p class="hero__text medium-text">
@@ -125,61 +147,65 @@
           />
         </button>
 
-        <ul class="slider__row">
-          <li class="slider__slide">
-            <div class="slider__content">
-              <img
-                class="slider__image"
-                src="images/coffee-slider-1.png"
-                alt="S'mores Frappuccino"
-              />
-              <div class="slider__description">
-                <h3 class="slider__name h3-text">S'mores Frappuccino</h3>
-                <p class="slider__text medium-text">
-                  This new drink takes an espresso and mixes it with brown sugar
-                  and cinnamon before being topped with oat milk.
-                </p>
-                <p class="slider__price h3-text">$5.50</p>
+        <div class="slider__viewport">
+          <ul class="slider__row">
+            <li class="slider__slide">
+              <div class="slider__content">
+                <img
+                  class="slider__image"
+                  src="images/coffee-slider-1.png"
+                  alt="S'mores Frappuccino"
+                />
+                <div class="slider__description">
+                  <h3 class="slider__name h3-text">S'mores Frappuccino</h3>
+                  <p class="slider__text medium-text">
+                    This new drink takes an espresso and mixes it with brown sugar
+                    and cinnamon before being topped with oat milk.
+                  </p>
+                  <p class="slider__price h3-text">$5.50</p>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="slider__slide">
-            <div class="slider__content">
-              <img
-                class="slider__image"
-                src="images/coffee-slider-2.png"
-                alt="Caramel Macchiato"
-              />
-              <div class="slider__description">
-                <h3 class="slider__name h3-text">Caramel Macchiato</h3>
-                <p class="slider__text medium-text">
-                  Fragrant and unique classic espresso with rich caramel-peanut
-                  syrup, with cream under whipped thick foam.
-                </p>
-                <p class="slider__price h3-text">$5.00</p>
+            <li class="slider__slide">
+              <div class="slider__content">
+                <img
+                  class="slider__image"
+                  src="images/coffee-slider-2.png"
+                  alt="Caramel Macchiato"
+                />
+                <div class="slider__description">
+                  <h3 class="slider__name h3-text">Caramel Macchiato</h3>
+                  <p class="slider__text medium-text">
+                    Fragrant and unique classic espresso with rich caramel-peanut
+                    syrup, with cream under whipped thick foam.
+                  </p>
+                  <p class="slider__price h3-text">$5.00</p>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="slider__slide">
-            <div class="slider__content">
-              <img
-                class="slider__image"
-                src="images/coffee-slider-3.png"
-                alt="Ice coffee"
-              />
-              <div class="slider__description">
-                <h3 class="slider__name h3-text">Ice coffee</h3>
-                <p class="slider__text medium-text">
-                  A popular summer drink that tones and invigorates. Prepared
-                  from coffee, milk and ice.
-                </p>
-                <p class="slider__price h3-text">$4.50</p>
+            <li class="slider__slide">
+              <div class="slider__content">
+                <img
+                  class="slider__image"
+                  src="images/coffee-slider-3.png"
+                  alt="Ice coffee"
+                />
+                <div class="slider__description">
+                  <h3 class="slider__name h3-text">Ice coffee</h3>
+                  <p class="slider__text medium-text">
+                    A popular summer drink that tones and invigorates. Prepared
+                    from coffee, milk and ice.
+                  </p>
+                  <p class="slider__price h3-text">$4.50</p>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
+
+
 
         <button
           class="slider__button slider__button--next button-icon-dark"
@@ -311,7 +337,7 @@
 
     <img
       class="download__image"
-      src="images/mobile-screens.png"
+      src="images/mobile.png"
       alt="Resource app on two smartphones"
     />
   </div>
