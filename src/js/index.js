@@ -19,16 +19,16 @@ import "../styles/offer.css";
 import "../styles/card.css";
 import "../styles/modal.css";
 
-// functions
-import { initGrid } from "./fill-grid";
+// functions, classes
 import { setSwitchDarkMode } from "./switch";
+import { CardsGrid } from "./cards-grid";
 import { burger } from "./burger";
 import { slider } from "./slider";
 import { Modal } from "./modal";
 
 setSwitchDarkMode();
 const modal = new Modal();
-initGrid(modal);
+new CardsGrid(modal);
 burger();
 slider();
 
