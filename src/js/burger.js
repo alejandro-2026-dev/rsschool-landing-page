@@ -1,32 +1,45 @@
-export function burger() {
-  const burger = document.querySelector('.header__burger');
-  const menu = document.querySelector('.header__panel');
-  let isOpen = false;
-
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('on');
-    menu.classList.toggle('on');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.body.classList.toggle('no-scroll');
-    isOpen = !isOpen;
-  });
-
-  document.querySelectorAll('.header__link').forEach((n) =>
-    n.addEventListener('click', close),
-  );
-
-  document.addEventListener('keyup', (e) => {
-    if (e.key === 'Escape') close();
-  })
-
-  const obj =  window.matchMedia('(min-width: 769px)');
-  obj.addEventListener('change', close)
-
-  function close() {
-    if (isOpen === false) return;
-    burger.classList.remove('on');
-    menu.classList.remove('on');
-    document.body.classList.remove('no-scroll');
-    isOpen = false;
+export class Burger {
+  constructor() {
+    this.init();
   }
+
+  init() {
+    this.burger = document.querySelector(".header__burger");
+    this.menu = document.querySelector(".header__panel");
+    this.isOpen = false;
+
+    this.burger.addEventListener("click", () => {
+      if (this.isOpen) this.close();
+      else this.open();
+    });
+
+    this.menu.addEventListener("click", (e) => {
+      if (e.target.closest(".header__link")) this.close();
+    });
+
+    document.addEventListener("keyup", (e) => {
+      if (e.key === "Escape") this.close();
+    });
+
+    window
+      .matchMedia("(min-width: 769px)")
+      .addEventListener("change", this.close);
+  }
+
+  open = () => {
+    if (this.isOpen === true) return;
+    this.burger.classList.add("on");
+    this.menu.classList.add("on");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.body.classList.add("no-scroll");
+    this.isOpen = true;
+  };
+
+  close = () => {
+    if (this.isOpen === false) return;
+    this.burger.classList.remove("on");
+    this.menu.classList.remove("on");
+    document.body.classList.remove("no-scroll");
+    this.isOpen = false;
+  };
 }

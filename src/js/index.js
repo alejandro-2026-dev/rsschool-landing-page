@@ -22,13 +22,13 @@ import "../styles/modal.css";
 // functions, classes
 import { setSwitchDarkMode } from "./switch";
 import { CardsGrid } from "./cards-grid";
-import { burger } from "./burger";
-import { slider } from "./slider";
+import { Burger } from "./burger";
+import { Slider } from "./slider";
 import { Modal } from "./modal";
 
 setSwitchDarkMode();
 const modal = new Modal();
 new CardsGrid(modal);
-burger();
-slider();
+new Burger();
+new Slider();
 
