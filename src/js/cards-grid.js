@@ -12,10 +12,10 @@ export class CardsGrid {
     this.grid = document.querySelector(".grid__container");
     this.template = document.getElementById("card-template");
     const offer = document.querySelector(".offer__tabs");
-    const tabItems = offer.querySelectorAll(".tab-item");
     const btnShowMore = document.getElementById("show-more");
 
     if (!this.grid || !this.template || !offer) return;
+    const tabItems = offer.querySelectorAll(".tab-item");
 
     this.render();
 

@@ -6,6 +6,7 @@ export class Burger {
   init() {
     this.burger = document.querySelector(".header__burger");
     this.menu = document.querySelector(".header__panel");
+    if (!this.burger || !this.menu) return;
     this.isOpen = false;
 
     this.burger.addEventListener("click", () => {
