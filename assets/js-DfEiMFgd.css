@@ -249,7 +249,7 @@ summary {
   --screen-tablet: 768px;
   --screen-mobile: 600px;
 
-  --header-height: 92px;
+  --header-height: 80px; /* 72px header + 8px gap */
 
   --transition: 0.3s ease;
 }
@@ -585,7 +585,8 @@ img {
     right: -100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: safe center;
+    overflow-y: auto;
     align-items: center;
     gap: 100px;
     padding: 60px 40px;
@@ -1426,7 +1427,8 @@ a.link-contact:hover::after {
   inset: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  overflow-y: auto;
   padding: 16px;
   background-color: var(--bg-overlay);
 }
@@ -1440,6 +1442,7 @@ a.link-contact:hover::after {
 .modal__content {
   max-width: 800px;
   width: 100%;
+  margin: auto;
   padding: 16px;
   border-radius: 40px;
   background-color: var(--bg-page);
