@@ -1,10 +1,26 @@
 <!-- hero.html -->
 <section class="hero" id="hero">
   <div class="container hero__container">
+    <video
+      class="hero__video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="images/img-hero.jpg"
+      aria-hidden="true"
+    >
+      <source
+        src="video/tablet.mp4"
+        type="video/mp4"
+        media="(max-width: 768px)"
+      />
+      <source src="video/desktop.mp4" type="video/mp4" />
+    </video>
     <div class="hero__offer">
       <h1 class="hero__title h1-text">
-        <span class="hero__title-accent accent-text">Enjoy</span> premium
-        coffee at our charming cafe
+        <span class="hero__title-accent accent-text">Enjoy</span> premium coffee
+        at our charming cafe
       </h1>
 
       <p class="hero__text medium-text">

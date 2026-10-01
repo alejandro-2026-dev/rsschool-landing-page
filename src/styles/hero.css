@@ -5,16 +5,24 @@
 }
 
 .hero__container {
+  position: relative;
+  overflow: hidden;
   max-width: 1360px;
   padding: 100px;
   border-radius: 40px;
   background-color: var(--bg-container);
-  background-image: url("../../public/images/img-hero.jpg");
-  background-position: center;
-  background-size: cover;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero__offer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -49,6 +57,10 @@
   opacity: 0;
   transition: width var(--transition), opacity var(--transition),
     margin-left var(--transition);
+}
+
+[data-theme="dark"] .button-primary__icon {
+  content: url("../../public/svg/coffee-cup-dark.svg");
 }
 
 .button-primary:hover .button-primary__icon {

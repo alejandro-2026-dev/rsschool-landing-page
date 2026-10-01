@@ -36,6 +36,8 @@
   --screen-tablet: 768px;
   --screen-mobile: 600px;
 
+  --header-height: 80px; /* 72px header + 8px gap */
+
   --transition: 0.3s ease;
 }
 

@@ -40,6 +40,10 @@
   min-width: 0;
 }
 
+[data-theme="dark"] .download__image {
+  content: url("../../public/images/mobile-for-dark.png");
+}
+
 .button-store {
   display: flex;
   align-items: center;
@@ -62,8 +66,12 @@
   transition: filter var(--transition);
 }
 
-.button-store:hover .button-store__icon {
+[data-theme="dark"] .button-store__icon {
   filter: brightness(0) invert(1);
+}
+
+[data-theme="dark"] .button-store:hover {
+  border-color: transparent;
 }
 
 .button-store__text {
